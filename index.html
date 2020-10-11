@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>TWT airpack</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book" rel="stylesheet" type="text/css"/>
+
+  </head>
+  <body id="corpse">
+    <header id="pageHeader">
+
+      <div class="logo">
+          <img src="./assets/twtlogo.svg" alt="">
+      </div>
+
+      <div class="contact-social">
+        <div class="icon-text">
+          <img src="./assets/phone.svg" alt="">
+          <p>51(342-4425)</p>
+        </div>
+
+        <div class="social">
+          <a href="#"><img style="color: black" class="icon" src="./assets/linkedin.svg" alt=""></a>
+          <a href="#"><img class="icon" src="./assets/whatsapp.svg" alt=""></a>
+          <a href="#"><img class="icon" src="./assets/facebook.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li class="menuLink"><a href="#banners">Quem Somos</a></li>
+          <li class="menuLink active"><a href="#services">Serviços</a></li>
+          <li onclick="showPrice()"><a href="">Cotação</a></li>
+          <li class="menuLink"><a href="#contact">Contato</a></li>
+          <li><a href="#">Portal do Cliente</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <a href="https://wa.me/honenumber">
+      <div class="whatsapp">
+        <img src="./assets/whatsapp-message.svg" alt="">
+          <button>WhatsApp</button>
+      </div>
+    </a>
+
+    <div class="banners" id="banners">
+
+        <button onclick="moveBannerArrows(1)"><img src="assets/next1.svg"/></button>
+
+        <div id="banners-carousel">
+
+            <img src="assets/Image%201.svg"/>
+            <img src="assets/Image%202.svg"/>
+            <img src="assets/Image%203.svg"/>
+
+        </div>
+
+        <button onclick="moveBannerArrows(0)"><img src="assets/next1.svg"/></button>
+
+        <div class="indicators">
+
+            <div class="active-dot"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div>
+
+    </div>
+
+    <section class="about" id="about">
+
+      <div class="cell">
+
+        <img src="./assets/ecofriendly.svg" alt="">
+        <h3>Empresa Eco friendly</h3>
+        <p>Empresa sustentavel e comprometida
+com a natureza</p>
+
+      </div>
+
+      <div class="cell">
+
+        <img src="./assets/Calculator.svg" alt="">
+        <h3>Cotação</h3>
+        <p>Faça uma cotação com a TWT e confira nossas condições de parceria.</p>
+        <button onclick="showPrice()" type="button" name="button">Clique aqui</button>
+
+      </div>
+
+      <div class="cell">
+
+        <img src="./assets/clients.svg" alt="">
+        <h3>Clientes</h3>
+        <p>Compromissados a manter nossos clientes 100% satisfeitos</p>
+
+      </div>
+
+    </section>
+
+    <section class="services" id="services">
+
+      <h2>Serviços</h2>
+
+      <div class="caroussel">
+
+        <button onclick="moveCarousel(1)" class="back" type="button" name="button"><img src="./assets/next.svg" alt=""></button>
+
+        <div id="items">
+
+        </div>
+
+        <button onclick="moveCarousel(0)" class="next" type="button" name="button"><img src="./assets/next.svg" alt=""></button>
+
+      </div>
+
+        <div id="cell-info">Cargas e encomendas despachadas via malha aérea regular com disponibilidade de acordo com o destino (24, 48 e 72 horas), inclusive com interiorização para mais de 5.000 cidades brasileiras.</div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+      <h2>Entre em contato com a gente!</h2>
+
+      <div class="container">
+
+        <div class="contact-info">
+
+          <div class="call-us">
+
+            <img src="./assets/call-us.svg" alt="">
+             <h3>Ligue para a gente</h3>
+             <p>Tem alguma sugestão, duvida ou solicitação?
+               Escreva para nós </p>
+          </div>
+
+          <div class="contact-cell">
+
+            <div class="icon-text">
+              <img src="./assets/phone-call.svg" alt="">
+              <p>Telefone:</p>
+            </div>
+
+            <p class="info-text">51 3342-4425</p>
+
+          </div>
+
+          <div class="contact-cell">
+
+            <div class="icon-text">
+              <img src="./assets/email.svg" alt="">
+              <p>E-mail:</p>
+            </div>
+
+            <p class="info-text">contato@twt.com.br</p>
+
+          </div>
+
+          <div class="contact-cell">
+
+            <div class="icon-text">
+              <img src="./assets/skype.svg" alt="">
+              <p>Live:</p>
+            </div>
+
+            <p class="info-text">twt.dsl</p>
+
+          </div>
+        </div>
+
+        <div class="location">
+
+          <img src="./assets/address.svg" alt="">
+          <p class="title">Endereço</p>
+          <p class="address">Av. Sertório,4455
+            Jardim São Pedro
+            Porto Alegre - RS</p>
+          <a class="link" href="#">Ver no google maps</a>
+
+        </div>
+
+        <form class="contact-form" method="post" action="http://formmail.kinghost.net/formmail.cgi">
+
+          <input type="hidden" name="recipient" value="twt@twt.com.br">
+          <input type="hidden" name="email" value="twt@twt.com.br">
+
+          <div class="text-input">
+
+            <input required type="text" name="Nome" value="" />
+            <label for="Nome">Nome</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <div class='verify-field'><img src=''/></div>
+            <input required id="email-input" type="text" onblur="checkEmail(this)" name="Email" value=""/>
+            <label for="Email">Email</label>
+
+          </div>
+
+          <div class="estate-select">
+
+            <div class="text-input">
+
+              <input required type="text" name="Cidade" value=""/>
+              <label for="Cidade">Cidade</label>
+
+            </div>
+
+            <div class="select-container">
+
+              <div id="dropdown-id">
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="subject" value=""/>
+            <label for="subject">Assunto</label>
+
+          </div>
+
+          <div class="text-box-input">
+
+            <textarea required type="text" name="Mensagem" value=""></textarea>
+            <label for="Mensagem">Mensagem</label>
+
+          </div>
+
+          <button class="form-button" type="submit" value="Submit" name="button">Enviar</button>
+
+        </form>
+      </div>
+
+    </section>
+
+    <footer>
+
+      <p class="address">Av. Sertório,4455
+      Jardim São Pedro
+    Porto Alegre - RS</p>
+
+      <p class="copyright">Todos direito reservados TWT -2020</p>
+
+      <div class="contact-social">
+
+        <div class="icon-text">
+          <img src="./assets/phone-call-footer.svg" alt="">
+          <p>51(342-4425)</p>
+        </div>
+
+        <div class="social">
+
+          <a href="#">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32.314" height="32.314" viewBox="0 0 32.314 32.314">
+                <path id="_1384014" data-name="1384014" d="M16.157,0A16.157,16.157,0,1,0,32.314,16.157,16.159,16.159,0,0,0,16.157,0Zm-4.7,24.425H7.527V12.587h3.935ZM9.495,10.97H9.469a2.051,2.051,0,1,1,.052-4.091,2.052,2.052,0,1,1-.026,4.091ZM25.651,24.425H21.716V18.092c0-1.592-.57-2.677-1.994-2.677A2.154,2.154,0,0,0,17.7,16.854a2.7,2.7,0,0,0-.129.96v6.611H13.64s.052-10.728,0-11.839h3.935v1.676a3.907,3.907,0,0,1,3.546-1.954c2.589,0,4.53,1.692,4.53,5.328Zm0,0" fill="#E8EBEE"/>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="31.81" height="31.963" viewBox="0 0 31.81 31.963">
+              <path id="_1384023" data-name="1384023" d="M27.425,4.645A15.842,15.842,0,0,0,2.5,23.756L.25,31.963l8.4-2.2a15.822,15.822,0,0,0,7.569,1.928h.007a15.845,15.845,0,0,0,11.2-27.043Zm-11.2,24.369h-.005a13.148,13.148,0,0,1-6.7-1.835l-.481-.285L4.053,28.2l1.33-4.858-.313-.5a13.164,13.164,0,1,1,11.152,6.169Zm7.221-9.86c-.4-.2-2.341-1.155-2.7-1.288s-.627-.2-.89.2-1.022,1.288-1.253,1.552-.462.3-.857.1a10.809,10.809,0,0,1-3.183-1.964,11.938,11.938,0,0,1-2.2-2.741c-.231-.4,0-.59.174-.808a11.2,11.2,0,0,0,.989-1.354.728.728,0,0,0-.033-.693c-.1-.2-.89-2.146-1.22-2.939-.322-.771-.647-.667-.891-.679s-.495-.014-.759-.014a1.454,1.454,0,0,0-1.055.5,4.439,4.439,0,0,0-1.385,3.3,7.7,7.7,0,0,0,1.616,4.094c.2.264,2.791,4.262,6.761,5.976a22.653,22.653,0,0,0,2.256.834,5.425,5.425,0,0,0,2.493.157A4.077,4.077,0,0,0,23.97,21.5a3.307,3.307,0,0,0,.231-1.882c-.1-.165-.363-.264-.758-.462Zm0,0" transform="translate(-0.25)" fill="#E8EBEE" fill-rule="evenodd"/>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="31.856" height="31.856" viewBox="0 0 31.856 31.856">
+              <path id="_1051360" data-name="1051360" d="M4.666,31.856H15.057V20.532H11.324V16.8h3.733V12.133a4.672,4.672,0,0,1,4.666-4.666H24.39V11.2H20.657a1.869,1.869,0,0,0-1.867,1.867V16.8h5.431L23.6,20.532H18.79V31.856h8.4a4.672,4.672,0,0,0,4.666-4.666V4.666A4.672,4.672,0,0,0,27.19,0H4.666A4.672,4.672,0,0,0,0,4.666V27.19A4.672,4.672,0,0,0,4.666,31.856Zm-2.8-27.19a2.8,2.8,0,0,1,2.8-2.8H27.19a2.8,2.8,0,0,1,2.8,2.8V27.19a2.8,2.8,0,0,1-2.8,2.8H20.657V22.4h4.524l1.244-7.466H20.657V13.066h5.6V5.6H19.724a6.54,6.54,0,0,0-6.533,6.533v2.8H9.457V22.4h3.733V29.99H4.666a2.8,2.8,0,0,1-2.8-2.8Zm0,0" fill="#E8EBEE"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </footer>
+      <div id="mask">
+
+        <div class="modal">
+        <button onclick="hidePrice()" class="close-button"><img src="assets/close.svg" /></button>
+        <h2>Faça uma cotação com a TWT</h2>
+        <form method="post" action="http://formmail.kinghost.net/formmail.cgi">
+
+          <input type="hidden" name="recipient" value="twt@twt.com.br">
+          <input type="hidden" name="subject" value="Nova cotação">
+          <input type="hidden" name="email" value="twt@twt.com.br">
+
+        <div class="modal-fields">
+
+          <div class="text-input">
+
+            <input required type="text" name="Nome" value=""/>
+            <label for="Nome">Nome:</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="Email" value=""/>
+            <label for="Email">E-mail:</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="Telefone" value=""/>
+            <label for="Telefone">Telefone:</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="Empresa" value=""/>
+            <label for="Empresa">Empresa:</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="Origem" value=""/>
+            <label for="Origem">Origem:</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="Destino" value=""/>
+            <label for="Destino">Destino:</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="Quantidade" value=""/>
+            <label for="Quantidade">Quantidade/Volume:</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="Peso" value=""/>
+            <label for="Peso">Peso:</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="Largura" value=""/>
+            <label for="Largura">Largura:</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="Altura" value=""/>
+            <label for="Altura">Altura:</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="Comprimento" value=""/>
+            <label for="Comprimento">Comprimento:</label>
+
+          </div>
+
+          <div class="text-input">
+
+            <input required type="text" name="Valor da Nf" value=""/>
+            <label for="Valor da Nf">Valor da Nf:</label>
+
+          </div>
+
+        </div>
+
+        <div class="text-box-input">
+
+          <textarea required type="text" name="Descrição do conteudo" value=""></textarea>
+          <label for="Descrição do conteudo">Descrição do conteudo:</label>
+
+        </div>
+
+        <button class="form-button" type="submit" value="Submit" name="button">Enviar</button>
+        </form>
+      </div>
+
+      </div>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
