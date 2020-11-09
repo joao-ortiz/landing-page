@@ -164,6 +164,7 @@ function CreateItems(o) {
 }
 
 window.moveCarousel = function(direction){
+  let itemsElem = document.getElementById('items')
   itemsElem.style.scrollBehavior = "smooth"
   if (direction === 1) {
 
@@ -388,6 +389,7 @@ function debounce(func, delay) {
 
 const elements = document.querySelectorAll('section')
 const navItems = document.querySelectorAll('.menuLink')
+const mobileNavItems = document.querySelectorAll('.mobileLink')
 
  function changeHeaderActive() {
     let index = elements.length - 1
@@ -399,6 +401,8 @@ const navItems = document.querySelectorAll('.menuLink')
 
     navItems.forEach(function(link) { link.classList.remove('active')})
     navItems[index].classList.add('active')
+    mobileNavItems.forEach(function(link) { link.classList.remove('active')})
+    mobileNavItems[index].classList.add('active')
  }
 
 function scrollBehavior(o) {
@@ -454,5 +458,16 @@ window.showPrice = function() {
 window.hidePrice = function() {
   document.getElementById('mask').style.zIndex = -1
   document.getElementById('mask').style.opacity = 0
+  document.getElementById('corpse').style.overflow = 'auto'
+}
+
+window.showMenu = function() {
+    document.querySelector('.mobileMenu').style.display = "flex"
+  document.querySelector('.mobileMenu').style.opacity = 1
+  document.getElementById('corpse').style.overflow = 'hidden'
+}
+window.hideMenu = function() {
+    document.querySelector('.mobileMenu').style.display = "none"
+  document.querySelector('.mobileMenu').style.opacity = 0
   document.getElementById('corpse').style.overflow = 'auto'
 }

@@ -33,11 +33,14 @@
         <ul>
           <li class="menuLink"><a href="#banners">Quem Somos</a></li>
           <li class="menuLink active"><a href="#services">Serviços</a></li>
-          <li onclick="showPrice()"><a href="">Cotação</a></li>
+          <li onclick="showPrice()" style="cursor: pointer">Cotação</li>
           <li class="menuLink"><a href="#contact">Contato</a></li>
           <li><a href="#">Portal do Cliente</a></li>
         </ul>
       </div>
+        <div onclick="showMenu()" class="mobileHamburguer">
+            <img src="./assets/menu.svg"/>
+        </div>
     </header>
 
     <a href="https://wa.me/honenumber">
@@ -183,7 +186,7 @@ com a natureza</p>
 
         </div>
 
-        <form class="contact-form" method="post" action="http://formmail.kinghost.net/formmail.cgi">
+        <form class="contact-form" method="post" onsubmit="event.preventDefault()" action="http://formmail.kinghost.net/formmail.cgi">
 
           <input type="hidden" name="recipient" value="twt@twt.com.br">
           <input type="hidden" name="email" value="twt@twt.com.br">
@@ -279,7 +282,7 @@ com a natureza</p>
 
       </div>
     </footer>
-      <div id="mask">
+      <div id="mask" >
 
         <div class="modal">
         <button onclick="hidePrice()" class="close-button"><img src="assets/close.svg" /></button>
@@ -390,7 +393,16 @@ com a natureza</p>
       </div>
 
       </div>
-
+      <div class="mobileMenu">
+        <div class="closeMenu" onclick="hideMenu()"><img src="assets/close-menu.svg" /></div>  
+        <ul>
+          <li class="mobileLink active"><a href="#banners" onclick="hideMenu()">Quem Somos</a></li>
+          <li class="mobileLink" ><a onclick="hideMenu()" href="#services">Serviços</a></li>
+          <li class="" onclick=" hideMenu();showPrice();" style="cursor: pointer">Cotação</li>
+          <li class="mobileLink"><a onclick="hideMenu()" href="#contact">Contato</a></li>
+          <li><a onclick="hideMenu()" href="#">Portal do Cliente</a></li>
+        </ul>
+      </div>
 
 
     <script src="script.js"></script>
