@@ -165,14 +165,15 @@ function CreateItems(o) {
 
 window.moveCarousel = function(direction){
   let itemsElem = document.getElementById('items')
+  let itemInnerWidth = document.querySelector('.services .caroussel #items .item').offsetWidth
   itemsElem.style.scrollBehavior = "smooth"
   if (direction === 1) {
 
-      itemsElem.scrollLeft -= 166
+      itemsElem.scrollLeft -= (itemInnerWidth + 37)
 
   } else {
 
-      itemsElem.scrollLeft += 166
+      itemsElem.scrollLeft += (itemInnerWidth + 37)
 
   }
 }

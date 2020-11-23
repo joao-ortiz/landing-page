@@ -51,6 +51,10 @@ header{
     transition: 0.2s;
 }
 
+header .logo  img {
+    height: 100px;
+}
+
 .hideHeader {
     top:-150px;
 }
@@ -237,7 +241,7 @@ header .contact-social p{
 
 .banners .indicators {
     position: absolute;
-    bottom: 40px;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     width: auto;
@@ -305,7 +309,7 @@ header .contact-social p{
     border: none;
     color: #1B87F7;
     font-size: 18px;
-    margin-top: auto;
+    margin-top: 10px;
 }
 
 .services {
@@ -797,6 +801,9 @@ footer .contact-social{
 }
 
 @media only screen and (max-width: 1220px) {
+    header .logo  img {
+    height: 80px;
+}
     .banners button {
     right: 45px;
     z-index: 1;
@@ -917,7 +924,19 @@ footer .contact-social{
 }
 
 @media only screen and (max-width: 840px) {
-     
+    header .logo  img {
+    height: 70px;
+}
+    .banners button img {
+        height: 25px
+    }
+    .banners .indicators {
+        bottom: 5%;
+    }
+    .banners .indicators div {
+        height: 10px;
+        width: 10px
+    }
     .whatsapp img {
         height: 35px
     }
@@ -950,6 +969,7 @@ footer .contact-social{
     header .social .icon {
         height: 30px;
         width: 30px;
+        margin: 0;
     }
     
     .mobileHamburguer {
@@ -977,5 +997,143 @@ footer .contact-social{
 @media only screen and (max-width: 750px) {
        .services .caroussel #items{
         max-width: 312px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    header .logo img{
+        height: 40px
+    }
+    body {
+        font-size: 14px
+    }
+    header {
+        height: 100px
+    }
+    header .contact-social p{
+        font-size: 14px
+    }
+    header .icon-text img {
+        height: 22px
+    }
+    header .social .icon {
+        height: 22px
+    }
+    .whatsapp {
+        top:110px;
+    }
+    .cell h3 {
+        font-size: 16px
+    }
+    .cell p {
+        font-size: 14px;
+            text-align: center
+    }
+    .services .item>img{
+        height: 90px
+    }
+    .services button img {
+        height: 30px
+    }
+    .services .caroussel #items {
+        max-width: 254px;
+            margin:0
+    }
+    .services #cell-info {
+        padding: 1rem;
+        max-width: 95vw;
+    }
+    .contact {
+        padding-top: 40px;
+            
+    }
+    .contact h2 {
+        margin: 40px auto;
+            text-align: center;
+        font-size: 25px !important
+    }
+    .contact .contact-info {
+        padding: 0.5rem;
+        max-width: 95vw;
+    }
+    .contact .location{
+        display: flex;
+        flex-direction: column;
+        justify-content: center
+    }
+    .dropdown-items {
+        top: 75px;
+        z-index: 2;
+    }
+    .dropdown-item {
+        font-size:18px;
+        overflow: hidden;
+        padding-left: 15px;
+    }
+    .dropdown-value {
+        padding-left:15px;
+    }
+    .estate-select {
+        flex-direction: column
+    }
+    .estate-select .text-input {
+        width: 100%;
+        
+    }
+    .estate-select .select-container {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .contact .contact-form {
+        max-width: 95vw;
+    }
+    .text-input input {
+        padding-left: 15px;
+        width: calc(100% - 15px);
+    }
+    .contact .form-button {
+        font-size: 18px;
+        width: 100%
+    }
+    footer .contact-social p{
+        font-size: 14px
+    }
+    footer .icon-text img {
+        height: 22px
+    }
+    footer .social .icon {
+        height: 22px;
+        margin: 0 7px;
+    }
+    .copyright {
+        font-size: 10px;
+        width: 30vw;
+        text-align: center;
+    }
+    footer .address{
+        font-size: 12px;
+    }
+    .modal h2 {
+        font-size: 25px !important;
+    }
+    .modal .close-button {
+        height: 30px;
+        width: 30px;
+        top: 15px;
+        right: 15px;
+        position: fixed
+    }
+    .modal .text-input input {
+        padding-left: 10px;
+        width: calc(100% - 10px);
+            font-size: 14px
+    }
+    .modal .text-input label {
+        font-size: 14px;
+        top: calc(50% - 7px);
+        left: 10px;
+    }
+    .modal .close-button img{
+        height: 15px;
+        width: 15px;
     }
 }

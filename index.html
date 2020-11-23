@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>TWT airpack</title>
-
+    <title>TWT airpack</title>  
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book" rel="stylesheet" type="text/css"/>
 
@@ -13,13 +12,13 @@
     <header id="pageHeader">
 
       <div class="logo">
-          <img src="./assets/twtlogo.svg" alt="">
+          <img src="./assets/twtlogo.png" alt="">
       </div>
 
       <div class="contact-social">
         <div class="icon-text">
           <img src="./assets/phone.svg" alt="">
-          <p>51(342-4425)</p>
+          <p>51(3342-4425)</p>
         </div>
 
         <div class="social">
@@ -258,7 +257,7 @@ com a natureza</p>
 
         <div class="icon-text">
           <img src="./assets/phone-call-footer.svg" alt="">
-          <p>51(342-4425)</p>
+          <p>51(3342-4425)</p>
         </div>
 
         <div class="social">
@@ -287,8 +286,8 @@ com a natureza</p>
         <div class="modal">
         <button onclick="hidePrice()" class="close-button"><img src="assets/close.svg" /></button>
         <h2>Faça uma cotação com a TWT</h2>
-        <form method="post" action="http://formmail.kinghost.net/formmail.cgi">
-
+        <form method="post" onsubmit="event.preventDefault()" action="http://formmail.kinghost.net/formmail.cgi">
+            <input type="hidden" name="redirect" value="http://www.twt.com.br/">
           <input type="hidden" name="recipient" value="twt@twt.com.br">
           <input type="hidden" name="subject" value="Nova cotação">
           <input type="hidden" name="email" value="twt@twt.com.br">
