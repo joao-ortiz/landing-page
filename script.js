@@ -349,7 +349,7 @@ window.sendForm = function(o, route) {
     })
     object.estate = estate
 
-    console.log(object)
+
 
     let xhr = new XMLHttpRequest()
     const url = '' + route
@@ -363,7 +363,7 @@ let hidden = false
 function headerScrolBehavior() {
     if(window.pageYOffset > 150) {
         hidden = true
-        console.log(hidden)
+
         document.getElementById("pageHeader").classList.add("hideHeader")
         setTimeout(function() {
             document.getElementById("pageHeader").classList.remove("hideHeader")
@@ -396,7 +396,7 @@ const mobileNavItems = document.querySelectorAll('.mobileLink')
     let index = elements.length - 1
 
     while (index > 0 & window.scrollY + 200 < elements[index].offsetTop) {
-      console.log(elements[index].offsetTop , window.scrollY, index)
+
       --index
     }
 
@@ -426,7 +426,7 @@ window.checkEmail = function(elem) {
   let container = elem.parentElement
   let icon = container.querySelector('img')
 
-  console.log(icon)
+  
 
   if (validateEmail(elem.value)) {
 

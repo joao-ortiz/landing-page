@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>TWT airpack</title>  
+    <title>TWT airpack</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book" rel="stylesheet" type="text/css"/>
 
@@ -81,7 +81,7 @@
         <img src="./assets/ecofriendly.svg" alt="">
         <h3>Empresa Eco friendly</h3>
         <p>Empresa sustentavel e comprometida
-com a natureza</p>
+          com a natureza</p>
 
       </div>
 
@@ -185,7 +185,7 @@ com a natureza</p>
 
         </div>
 
-        <form class="contact-form" method="post" onsubmit="event.preventDefault()" action="http://formmail.kinghost.net/formmail.cgi">
+        <form class="contact-form" method="POST" onsubmit="event.preventDefault()" action="<? $PHP_SELF; ?>">
 
           <input type="hidden" name="recipient" value="twt@twt.com.br">
           <input type="hidden" name="email" value="twt@twt.com.br">
@@ -238,7 +238,7 @@ com a natureza</p>
 
           </div>
 
-          <button class="form-button" type="submit" value="Submit" name="button">Enviar</button>
+          <button class="form-button" type="submit" value="Submit" name="BTEnviaContato">Enviar</button>
 
         </form>
       </div>
@@ -286,7 +286,7 @@ com a natureza</p>
         <div class="modal">
         <button onclick="hidePrice()" class="close-button"><img src="assets/close.svg" /></button>
         <h2>Faça uma cotação com a TWT</h2>
-        <form method="post" onsubmit="event.preventDefault()" action="http://formmail.kinghost.net/formmail.cgi">
+        <form method="post" action="<? PHP_SELF; ?>">
             <input type="hidden" name="redirect" value="http://www.twt.com.br/">
           <input type="hidden" name="recipient" value="twt@twt.com.br">
           <input type="hidden" name="subject" value="Nova cotação">
@@ -302,8 +302,8 @@ com a natureza</p>
           </div>
 
           <div class="text-input">
-
-            <input required type="text" name="Email" value=""/>
+            <div class='verify-field'><img src=''/></div>
+            <input required type="text" onblur="checkEmail(this)" name="Email" value=""/>
             <label for="Email">E-mail:</label>
 
           </div>
@@ -346,35 +346,35 @@ com a natureza</p>
           <div class="text-input">
 
             <input required type="text" name="Peso" value=""/>
-            <label for="Peso">Peso:</label>
+            <label for="Peso">Peso(Kg):</label>
 
           </div>
 
           <div class="text-input">
 
             <input required type="text" name="Largura" value=""/>
-            <label for="Largura">Largura:</label>
+            <label for="Largura">Largura(cm):</label>
 
           </div>
 
           <div class="text-input">
 
             <input required type="text" name="Altura" value=""/>
-            <label for="Altura">Altura:</label>
+            <label for="Altura">Altura(cm):</label>
 
           </div>
 
           <div class="text-input">
 
             <input required type="text" name="Comprimento" value=""/>
-            <label for="Comprimento">Comprimento:</label>
+            <label for="Comprimento">Comprimento(cm):</label>
 
           </div>
 
           <div class="text-input">
 
-            <input required type="text" name="Valor da Nf" value=""/>
-            <label for="Valor da Nf">Valor da Nf:</label>
+            <input required type="text" name="ValorNf" value=""/>
+            <label for="ValorNf">Valor da Nf:</label>
 
           </div>
 
@@ -382,18 +382,18 @@ com a natureza</p>
 
         <div class="text-box-input">
 
-          <textarea required type="text" name="Descrição do conteudo" value=""></textarea>
-          <label for="Descrição do conteudo">Descrição do conteudo:</label>
+          <textarea required type="text" name="Descricao" value=""></textarea>
+          <label for="Descricao">Descrição do conteudo:</label>
 
         </div>
 
-        <button class="form-button" type="submit" value="Submit" name="button">Enviar</button>
+        <button class="form-button" type="submit" value="Submit" name="BTEnviaCotacao">Enviar</button>
         </form>
       </div>
 
       </div>
       <div class="mobileMenu">
-        <div class="closeMenu" onclick="hideMenu()"><img src="assets/close-menu.svg" /></div>  
+        <div class="closeMenu" onclick="hideMenu()"><img src="assets/close-menu.svg" /></div>
         <ul>
           <li class="mobileLink active"><a href="#banners" onclick="hideMenu()">Quem Somos</a></li>
           <li class="mobileLink" ><a onclick="hideMenu()" href="#services">Serviços</a></li>
@@ -405,5 +405,72 @@ com a natureza</p>
 
 
     <script src="script.js"></script>
+    <?php
+if (isset($_POST['BTEnviaContato'])) {
+
+  $nome = $_POST['Nome'];
+  $email = $_POST['Email'];
+  $cidade = $_POST['Cidade'];
+  $estado = $_POST['Estado'];
+  $assunto = $_POST['subject'];
+  $mensagem = $_POST['Mensagem'];
+
+  $email_remetente = "twt@twt.com.br";
+
+  $email_destinatario = "twt@twt.com.br";
+  $email_reply = "$email";
+  $email_assunto = "$assunto";
+  $email_conteudo = "Nome = $nome \n";
+  $email_conteudo .= "Email = $email \n";
+  $email_conteudo .= "Cidade = $cidade \n";
+  $email_conteudo .= "Estado = $estado \n";
+  $email_conteudo .= "Mensagem = $mensagem \n";
+
+  $email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Subject: $email_assunto","Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
+
+} if (isset($_POST['BTEnviaCotacao'])) {
+
+  $nome = $_POST['Nome'];
+  $email = $_POST['Email'];
+  $telefone = $_POST['Telefone'];
+  $empresa = $_POST['Empresa'];
+  $origem = $_POST['Origem'];
+  $destino = $_POST['Destino'];
+  $quantidade = $_POST['Quantidade'];
+  $largura = $_POST['Largura'];
+  $altura = $_POST['Altura'];
+  $comprimento = $_POST['Comprimento'];
+  $valorNf = $_POST['ValorNf'];
+  $descricao = $_POST['Descricao'];
+
+  $email_remetente = "twt@twt.com.br";
+
+
+
+  $email_destinatario = "twt@twt.com.br";
+  $email_reply = "$email";
+  $email_assunto = "Cotação Site";
+
+  $email_conteudo = "Nome = $nome \n";
+  $email_conteudo .= "Email = $email \n";
+  $email_conteudo .= "Telefone = $telefone \n";
+  $email_conteudo .= "Empresa = $empresa \n";
+  $email_conteudo .= "Origem = $origem \n";
+  $email_conteudo .= "Destino = $destino \n";
+  $email_conteudo .= "Quantidade = $quantidade \n";
+  $email_conteudo .= "Largura = $largura \n";
+  $email_conteudo .= "Altura = $altura \n";
+  $email_conteudo .= "Comprimento = $comprimento \n";
+  $email_conteudo .= "Valor da Nf = $valorNf \n";
+  $email_conteudo .= "Descrição = $descricao \n";
+
+
+  $email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Subject: $email_assunto","Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
+
+
+
+
+}
+?>
   </body>
 </html>
